@@ -1,0 +1,58 @@
+[project]
+name = "Resume-RAG"
+version = "0.1.0"
+description = "(Resume Screening Assistant) for HR that answers recruiter questions over a corpus of resumes (PDF + DOCX) and returns **per-candidate scores where every point cites the exact resume line that justifies it."
+requires-python = ">=3.11"
+dependencies = [
+    # Orchestration
+    "langchain>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langgraph>=0.2.0",
+    # LLM + reranker + vector store
+    "langchain-anthropic>=0.3.0",
+    "langchain-cohere>=0.4.0",
+    "cohere>=5.0.0",
+    "langchain-chroma>=0.2.0",
+    "chromadb>=0.5.0",
+    # Embeddings (local, free)
+    "langchain-huggingface>=0.1.0",
+    "sentence-transformers>=3.0.0",
+    # Sparse retrieval for hybrid search (Layer 0)
+    "rank-bm25>=0.2.2",
+    #PDF parsing
+    "pypdf>=4.0.0",
+    #DOCX parsing
+    "docx2txt>=0.8",
+    # Eval data
+    "datasets>=3.0.0",
+    # Config + CLI
+    "pydantic-settings>=2.5.0",
+    "rich>=13.0.0",
+    "langchain-text-splitters>=1.1.2",
+    "langchain-classic>=1.0.7",
+    "langchain-community>=0.3.0 ",
+    "ipykernel>=7.3.0",
+    "ragas>=0.2.10",
+    "langsmith>=0.1.0,"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+# For downloading dependencies: use 'uv sync'

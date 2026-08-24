@@ -5,7 +5,7 @@ not specific secret values.
 """
 from pathlib import Path
 
-from src.config import Settings, get_settings
+from resume_rag.config import Settings, get_settings
 
 
 def test_settings_singleton():

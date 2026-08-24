@@ -1,8 +1,8 @@
 """Verify parent-child chunking: counts + one linked pair per resume."""
 
-from src.config import get_settings
-from src.ingestion.loader import load_all_resumes
-from src.ingestion.chunker import chunk_all_resumes
+from resume_rag.config import get_settings
+from resume_rag.ingestion.loader import load_all_resumes
+from resume_rag.ingestion.chunker import chunk_all_resumes
 
 
 def main():

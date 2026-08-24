@@ -1,8 +1,8 @@
 """Batch 1: verify the graph compiles and routes correctly (stub nodes)."""
 
 
-from src.graph.builder import build_agent
-from src.graph.router import classify
+from resume_rag.graph.builder import build_agent
+from resume_rag.graph.router import classify
 
 
 # def main():

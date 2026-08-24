@@ -3,9 +3,9 @@
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from src.cache.factory import get_cache
-from src.cache.kb_version import _version_file_path, read_kb_version
-from src.config import get_settings
+from resume_rag.cache.factory import get_cache
+from resume_rag.cache.kb_version import _version_file_path, read_kb_version
+from resume_rag.config import get_settings
 
 def section(title: str) -> None:
     print(f"\n{'-'*60}\n{title}\n{'-'*60}")

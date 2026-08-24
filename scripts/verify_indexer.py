@@ -1,14 +1,14 @@
 """Verify indexer: ingest, check counts, then test parent-child retrieval."""
 
-from src.components.vectorstore import (
+from resume_rag.components.vectorstore import (
     get_child_vectorstore,
     get_parent_child_retriever,
     get_parent_docstore,
 )
-from src.config import get_settings
-from src.ingestion.chunker import chunk_all_resumes
-from src.ingestion.indexer import index_resumes
-from src.ingestion.loader import load_all_resumes
+from resume_rag.config import get_settings
+from resume_rag.ingestion.chunker import chunk_all_resumes
+from resume_rag.ingestion.indexer import index_resumes
+from resume_rag.ingestion.loader import load_all_resumes
 
 
 def main():

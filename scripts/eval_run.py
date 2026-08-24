@@ -1,8 +1,8 @@
 """Run the full RAGAS eval: agent over dataset -> metrics -> CSV."""
 
-from src.eval.dataset import get_dataset
-from src.eval.ragas_eval import run_ragas
-from src.eval.runner import EvalRunner
+from resume_rag.eval.dataset import get_dataset
+from resume_rag.eval.ragas_eval import run_ragas
+from resume_rag.eval.runner import EvalRunner
 
 
 def main():

@@ -1,6 +1,6 @@
 """Verify Layer 0: hybrid retrieval -> rerank -> parents, on 3 query types."""
 
-from src.components.retriever import HybridRetriever
+from resume_rag.components.retriever import HybridRetriever
 
 def show(title: str, parents):
     print(f"\n{'='*60}\n{title}\n{'='*60}")

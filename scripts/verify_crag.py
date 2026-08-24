@@ -1,6 +1,6 @@
 """Verify CRAG: a strong-match query and a weak-match query (honest refusal)."""
 
-from src.crag.pipeline import CRAGPipeline
+from resume_rag.crag.pipeline import CRAGPipeline
 
 
 def show(title: str, result):

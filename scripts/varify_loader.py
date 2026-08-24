@@ -1,8 +1,8 @@
 """Verify loader: print filename, metadata, and first 200 chars for every resume."""
 
 from pathlib import Path
-from src.config import get_settings
-from src.ingestion.loader import load_all_resumes
+from resume_rag.config import get_settings
+from resume_rag.ingestion.loader import load_all_resumes
 
 
 def main():

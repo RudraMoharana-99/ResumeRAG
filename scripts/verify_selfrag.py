@@ -4,10 +4,10 @@ Includes a planted-fabrication test: we monkeypatch the scorer to inject a
 fake quote and confirm the verifier catches it.
 """
 
-from src.crag.pipeline import CRAGPipeline
-from src.selfrag.pipeline import SelfRAGPipeline
-from src.selfrag import verifier
-from src.selfrag.scorer import ScorePoint
+from resume_rag.crag.pipeline import CRAGPipeline
+from resume_rag.selfrag.pipeline import SelfRAGPipeline
+from resume_rag.selfrag import verifier
+from resume_rag.selfrag.scorer import ScorePoint
 
 
 def show(result):
@@ -50,7 +50,7 @@ def main():
         claim="Built a quantum teleportation pipeline",
         evidence="Led the quantum teleportation team at NASA in 2099",
     )
-    from src.ingestion.candidate_store import load_candidate_text
+    from resume_rag.ingestion.candidate_store import load_candidate_text
     resume = load_candidate_text(candidate_id)
     grounded = verifier.is_grounded(fake, resume)
     print(f"  fabricated quote grounded? {grounded}  (expected: False)")
